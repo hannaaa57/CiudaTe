@@ -8,6 +8,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/all.css">
   @yield('titulo')
+<<<<<<< HEAD
+
+=======
+>>>>>>> cf4c44b (migraciones y modelos)
   
   
 
@@ -19,6 +23,38 @@
     <nav class=" container-fluid bd-gutter flex-wrap flex-lg-nowrap "  aria-label="Main navigation">  
       
       <!--Logo, direcciona al inicio-->
+<<<<<<< HEAD
+      <a class="navbar-brand" href="http://localhost/CuidaTe/public/inicio">
+        <img src="images/CuidaTeLogo.png" alt="CuidaTe"  width="" height="50">
+      </a>
+      
+      @if (Auth::guest())
+        <div class="d-flex dropdown " data-bs-toggle="dropdown" aria-expanded="false">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="images/persona.jpg" alt="mdo" width="40" height="40" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end text-small shadow">
+            <li> <p class="dropdown-header">usuario </p> </li>
+            <li><a class="dropdown-item" href="http://localhost/CuidaTe/public/perfil">Perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item" href="http://localhost/CuidaTe/public/logout" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                Cerrar sesión
+              </a>
+            </li>
+          </ul>
+        </div>              
+      @else
+        <!--Registrate-->
+        <div class="d-flex dropdown " aria-expanded="false">
+          <a class="btn btn-primary btn-lg btn-block"  href="http://localhost/CuidaTe/public/registro" >Registrarse</a>
+        </div>
+      @endif
+
+
+      
+=======
       <a class="navbar-brand" href="Inicio.html">
         <img src="images/CuidaTeLogo.png" alt="CuidaTe"  width="" height="50">
       </a>
@@ -27,6 +63,7 @@
       <div class="d-flex dropdown " data-bs-toggle="dropdown" aria-expanded="false">
         <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location.href='Registrarse.html'">Registrarse</button>
       </div>
+>>>>>>> cf4c44b (migraciones y modelos)
     </nav>
   </header>
 

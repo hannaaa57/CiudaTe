@@ -14,12 +14,20 @@
         <div class="container-md text-black pb-2">
           <h2>Información sobre n persona</h2>
         </div>
+<<<<<<< HEAD
+        <label class="form-label fs-3" for="">En caso de emergencia, pulse el botón. si gusta puede rellenar llena los siguientes datos, este te mostrara mas informacion sobre mi y le mandara un mensaje a una persona de confianza.</label>
+=======
         <label class="form-label fs-3" for="">En caso de emergencia, llena los siguientes datos y pulsa el botón, este te mostrara mas informacion sobre mi y le mandara un mensaje a una persona de confianza.</label>
+>>>>>>> cf4c44b (migraciones y modelos)
         <!--Nombre-->
         <div class="row mb-3 my-3">
           <label for="nombreH2" class="col-sm-3 col-form-label">Nombre</label>
           <div class="col-sm-9">
+<<<<<<< HEAD
+            <input type="text" id="nombreH" class="form-control form-control-lg" name="nombreH" autofocus="autofocus" autocomplete="name">	
+=======
             <input type="text"  value="" class="form-control" id="nombreH" >
+>>>>>>> cf4c44b (migraciones y modelos)
           </div>
         </div>
         
@@ -27,7 +35,19 @@
         <div class="row mb-3 my-3">
           <label for="telefonoH2" class="col-sm-3 col-form-label">Teléfono</label>
           <div class="col-sm-9">
+<<<<<<< HEAD
+            <input type="number" pattern="\d*" id="telefonoH" class="form-control" name="telefonoH" autofocus="autofocus" autocomplete="tel-local">
+          </div>
+        </div>
+
+        <!--Correo-->
+        <div class="row mb-3 my-3">
+          <label for="emalH-2" class="col-sm-3 col-form-label">Teléfono</label>
+          <div class="col-sm-9">
+            <input type="email" id="emailH" class="form-control form-control-lg" name="emailH" autofocus="autofocus" autocomplete="email">
+=======
             <input type="number" value="" class="form-control" id="telefonoH" >
+>>>>>>> cf4c44b (migraciones y modelos)
           </div>
         </div>
 
@@ -36,19 +56,32 @@
           <label for="nombreH2" class="col-sm-3 col-form-label">Descripción</label>
           <div class="col-sm-9">
             <textarea name="" id="" cols="30" rows="5" class="form-control" ></textarea>
+<<<<<<< HEAD
+=======
             <!--<input type="textarea"  value="" class="form-control" id="nombreH" >.-->
+>>>>>>> cf4c44b (migraciones y modelos)
           </div>
         </div>
 
         <div class="d-grid gap-2">
+<<<<<<< HEAD
+          <a class="btn btn-lg btn-danger"  href="http://localhost/CuidaTe/public/emergencia">Emergencia</a>			
+        </div>
+
+=======
           <button type="submit"  class="btn btn-lg btn-danger" onclick="window.location.href='Emergencia.html'">Emergencia</button>  
         </div>
         
+>>>>>>> cf4c44b (migraciones y modelos)
       </div>
     </div>
 
     <!--Datos perfil-->
+<<<<<<< HEAD
+    <div class="bd-content bg-light container-lg border-top py-3">
+=======
     <div class="bd-content bg-light container-lg border-top py-3 ">
+>>>>>>> cf4c44b (migraciones y modelos)
       <div class="container-md text-black mt-4">
         <!--Informacion basica-->
         <div class="container-md text-black pb-2">
@@ -62,27 +95,49 @@
         <div class="row ">
           <label for="nombre2" class="col-sm-3 col-form-label">Nombre</label>
           <div class="col-sm-9">
+<<<<<<< HEAD
+            <input type="text"  value="Yo" class="form-control" id="nombre" name="name" disabled>
+=======
             <input type="text"  value="Yo" class="form-control" id="correo" disabled>
+>>>>>>> cf4c44b (migraciones y modelos)
           </div>
         </div>
         <!--Correo-->
         <div class="row mb-3 my-3">
           <label for="correo2" class="col-sm-3 col-form-label">Correo electrónico</label>
           <div class="col-sm-9">
+<<<<<<< HEAD
+            <input type="email" value="micorreo@gmail.com" class="form-control" id="correo" name="correo" disabled>
+=======
             <input type="email" value="micorreo@gmail.com" class="form-control" id="correo" disabled>
+>>>>>>> cf4c44b (migraciones y modelos)
           </div>
         </div>
         <!--Numero-->
         <div class="row mb-3 my-3">
           <label for="telefono-2" class="col-sm-3 col-form-label">Teléfono</label>
           <div class="col-sm-9">
+<<<<<<< HEAD
+            <input type="tel" value="6677894513" class="form-control" id="telefono" name="telefono" disabled>
+=======
             <input type="tel" value="6677894513" class="form-control" id="telefono" disabled>
+>>>>>>> cf4c44b (migraciones y modelos)
           </div>
         </div>
         <!--Fecha nac-->
         <div class="row mb-3 my-3">
           <label for="fechNac2" class="col-sm-3 col-form-label">Fecha de nacimiento</label>
           <div class="col-sm-9">
+<<<<<<< HEAD
+            <input type="date" value="2005-05-07" class="form-control" id="fechNac" name="fechaNac" disabled>
+          </div>
+        </div>
+        <!--Genero-->
+        <div class="row mb-3 my-3">
+          <label for="genero2" class="col-sm-3 col-form-label">Género</label>
+          <div class="col-sm-9">
+            <input type="text" value="Mujer" class="form-control" id="genero" name="genero" disabled>
+=======
             <input type="date" value="2005-05-07" class="form-control" id="fechNac" disabled>
           </div>
         </div>
@@ -91,11 +146,15 @@
           <label for="genero2" class="col-sm-3 col-form-label">Género</label>
           <div class="col-sm-9">
             <input type="text" value="Mujer" class="form-control" id="genero" disabled>
+>>>>>>> cf4c44b (migraciones y modelos)
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cf4c44b (migraciones y modelos)
   </div>
 
 @stop
