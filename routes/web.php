@@ -24,7 +24,29 @@ Route::get('/registro', function () {
     return view('cuidate.registro');
 });
 
+Route::get('/iniciaSesion', function () {
+    return view('cuidate.IniciaSesion');
+});
 
+Route::get('/inicio', function () {
+    return view('cuidate.Inicio');
+});
+
+Route::get('/perfil', function () {
+    return view('cuidate.Perfil');
+});
+
+Route::get('/editarPerfil', function () {
+    return view('cuidate.EditarPerfil');
+});
+
+Route::get('/qr', function () {
+    return view('cuidate.QR');
+});
+
+Route::get('/emergencia', function () {
+    return view('cuidate.Emergencia');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
