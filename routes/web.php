@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\ReporteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,7 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
+//paginas
 Route::get('/', function () {
     return view('welcome');
 });
@@ -32,21 +36,35 @@ Route::get('/inicio', function () {
     return view('cuidate.Inicio');
 });
 
-Route::get('/perfil', function () {
-    return view('cuidate.Perfil');
-});
 
 Route::get('/editarPerfil', function () {
     return view('cuidate.EditarPerfil');
 });
 
-Route::get('/qr', function () {
-    return view('cuidate.QR');
-});
+Route::get('/qr',[UsuarioController::class, 'consultar']);
 
 Route::get('/emergencia', function () {
     return view('cuidate.Emergencia');
 });
+
+Route::get('/usuarios', [GrupoController::class, 'consultar'])->name('usuarios');
+
+
+//foto de perfil
+Route::get('/perfil', 'UsuarioController')->name('usuario.foto');
+Route::patch('/perfil', 'UsuarioController')->name('usuario.foto.update');
+
+
+
+//funciones
+Route::middleware('auth')->group(function () {
+    Route::get('/reportes', [ReportesController::class, 'consultar'])->name('reportes');
+
+    Route::get('/reportar', [ReportarController::class, 'consultar'])->name('reportar');
+});
+require __DIR__.'/auth.php';
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -77,6 +95,11 @@ Route::group(['prefix' => 'alumno','middleware' => ['alumno', 'role:alumno']], f
     Route::get('/home', function () {
         return view('alumno.home');
     });
+
+
+    Route::get('/registro', [UsuarioController::class, 'registrar']);
+    Route::get('/perfil', [UsuarioController::class, 'consultar']);
+
 });
 
 require __DIR__.'/auth.php';

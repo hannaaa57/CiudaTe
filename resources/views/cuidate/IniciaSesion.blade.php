@@ -1,7 +1,7 @@
 @extends('background1')
 
 @section('titulo')
-<title>TTitulo</title>
+<title>Iniciar sesion</title>
 @stop
 
 @section('contenido')
@@ -25,7 +25,7 @@
                         
                         <!--Contraseña-->
 						<div class="form-outline mb-4">
-							<input type="password" id="contra" class="form-control form-control-lg" name="contra" required="required" autofocus="autofocus" autocomplete="contra">
+							<input type="password" id="contra" class="form-control form-control-lg" name="contra" required="required" autofocus="autofocus" autocomplete="current-password">
 							<label class="form-label" for="contra-2" style="margin-left: 0px;">Contraseña</label>
 							<div class="form-notch">
 								<div class="form-notch-leading" style="width: 9px;"></div>
@@ -34,16 +34,10 @@
 							</div>
 						</div>
 
-
-                        <label for="remember_me" class="form-check d-flex justify-content-start mb-4">
-                            <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
-                            <span class="form-check-label px-1">Recordar contraseña</span>
-                        </label>
-
                         <button type="submit" class="btn btn-lg btn-block btn-danger">Inicia sesion</button>
 						<hr class="my-4">
 						    No tienes una cuenta?
-						<a class="btn btn-primary btn-lg btn-block"  href="http://localhost/CuidaTe/public/iniciaSesion">Registrarse</a>
+						<a class="btn btn-primary btn-lg btn-block"  href="http://localhost/CuidaTe/public/registro">Registrarse</a>
 					</div>
                 </div>
             </div>

@@ -24,40 +24,45 @@
           <div class="justify-content-center text-center mb-3">
             <img src="img/persona.jpg" alt="Foto de perfil" width="200" height="" class="d-block mx-auto rounded-circle">
             <button type="button" class="btn">Cambiar foto de perfil</button>
+            {{ Form::open(['route' => ['usuario.foto.update'], 'files' => true, 'method' => 'PATCH']) }}
+              <p>{{ Form::file('file_path') }}</p>
+              <p>{{ Form::submit('Update', ['name' => 'submit']) }}</p>
+            {{ Form::close() }}
           </div>
           <!--Nombre-->
           <div class="row ">
             <label for="nombre2" class="col-sm-3 col-form-label">Nombre</label>
             <div class="col-sm-9">
-              <input type="text"  value="Yo" class="form-control" id="correo" disabled>
+              <input type="text" name="nombre" value="Yo" class="form-control" id="nombre" disabled>
             </div>
           </div>
           <!--Correo-->
           <div class="row mb-3 my-3">
             <label for="correo2" class="col-sm-3 col-form-label">Correo electrónico</label>
             <div class="col-sm-9">
-              <input type="email" value="micorreo@gmail.com" class="form-control" id="correo" disabled>
+              <input type="email" value="micorreo@gmail.com" class="form-control" id="correo" name="correo" disabled>
             </div>
           </div>
           <!--Numero-->
           <div class="row mb-3 my-3">
             <label for="telefono-2" class="col-sm-3 col-form-label">Teléfono</label>
             <div class="col-sm-9">
-              <input type="tel" value="6677894513" class="form-control" id="telefono" disabled>
+              <input type="text" class="form-control" id="name" value="{{old('name') ??  $user->name}}" placeholder="Enter name" name="name" >
+              <input type="tel" value="6677894513" class="form-control" id="telefono" name="telefono" disabled>
             </div>
           </div>
           <!--Fecha nac-->
           <div class="row mb-3 my-3">
             <label for="fechNac2" class="col-sm-3 col-form-label">Fecha de nacimiento</label>
             <div class="col-sm-9">
-              <input type="date" value="2005-05-07" class="form-control" id="fechNac" disabled>
+              <input type="date" value="2005-05-07" class="form-control" id="fechNac" name="fecNac" disabled>
             </div>
           </div>
           <!--Genero-->
           <div class="row mb-3 my-3">
             <label for="genero2" class="col-sm-3 col-form-label">Género</label>
             <div class="col-sm-9">
-              <input type="text" value="Mujer" class="form-control" id="genero" disabled>
+              <input type="text" value="Mujer" class="form-control" id="genero" name="genero" disabled>
             </div>
           </div>
         </div>
@@ -75,7 +80,7 @@
           <div class="row mb-3 my-3">
             <label for="CURP2" class="col-sm-3 col-form-label">CURP</label>
             <div class="col-sm-9">
-              <input type="text"  value="" class="form-control" id="CURP" >
+              <input type="text"  value="" class="form-control" id="CURP" name="CURP" required="required" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -91,7 +96,7 @@
           <div class="row mb-3 my-3">
             <label for="altura2" class="col-sm-3 col-form-label">Altura</label>
             <div class="col-sm-9">
-              <input type="number"  value="" class="form-control" id="altura" >
+              <input type="number" value="" class="form-control" id="altura" name="altura" required="required" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -107,7 +112,7 @@
           <div class="row mb-3 my-3">
             <label for="peso2" class="col-sm-3 col-form-label">Peso</label>
             <div class="col-sm-9">
-              <input type="number"  value="" class="form-control" id="peso" >
+              <input type="number"  value="" class="form-control" id="peso" name="peso" required="required" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -123,7 +128,7 @@
           <div class="row mb-3 my-3">
             <label for="tSangre2" class="col-sm-3 col-form-label">Tipo de sangre</label>
             <div class="col-sm-9">
-              <input type="email" value="" class="form-control" id="tSangre" >
+              <input type="email" value="" class="form-control" id="tSangre" name="tSangre" required="required" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -139,7 +144,7 @@
           <div class="row mb-3 my-3">
             <label for="residencia2" class="col-sm-3 col-form-label">Ciudad de residencia</label>
             <div class="col-sm-9">
-              <input type="email" value="" class="form-control" id="residencia" >
+              <input type="email" value="" class="form-control" id="residencia" name="residencia" required="required" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -166,7 +171,7 @@
           <div class="row mb-3 my-3">
             <label for="enfermedad2" class="col-sm-3 col-form-label">Enfermedad</label>
             <div class="col-sm-9">
-              <input type="text"  value="" class="form-control" id="enfermedad" >
+              <input type="text"  value="" class="form-control" id="enfermedad" name="enfermedad" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -183,7 +188,7 @@
           <div class="row mb-3 my-3">
             <label for="discapacidad2" class="col-sm-3 col-form-label">Discapacidad</label>
             <div class="col-sm-9">
-              <input type="email" value="" class="form-control" id="discapacidad" >
+              <input type="email" value="" class="form-control" id="discapacidad" name="discapacidad" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -200,7 +205,7 @@
           <div class="row mb-3 my-3">
             <label for="alergias2" class="col-sm-3 col-form-label">Alergias</label>
             <div class="col-sm-9">
-              <input type="tel" value="" class="form-control" id="alergias" >
+              <input type="tel" value="" class="form-control" id="alergias" name="alergias" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -217,7 +222,7 @@
           <div class="row mb-3 my-3">
             <label for="med2" class="col-sm-3 col-form-label">Actulmente consume medicamentos</label>
             <div class="col-sm-9">
-              <input type="tel" value="" class="form-control" id="med" >
+              <input type="tel" value="" class="form-control" id="med" name="med" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -234,7 +239,7 @@
           <div class="row mb-3 my-3">
             <label for="embarazo2" class="col-sm-3 col-form-label">Embarazo</label>
             <div class="col-sm-9">
-              <input type="tel" value="" class="form-control" id="embarazo" >
+              <input type="tel" value="" class="form-control" id="embarazo" name="embarazo" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -251,7 +256,7 @@
           <div class="row mb-3 my-3">
             <label for="DoA2" class="col-sm-3 col-form-label">Consume recurrentemento drogas o alcohol</label>
             <div class="col-sm-9">
-              <input type="tel" value="" class="form-control" id="DoA" >
+              <input type="tel" value="" class="form-control" id="DoA" name="DoA" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -268,7 +273,7 @@
           <div class="row mb-3 my-3">
             <label for="donar2" class="col-sm-3 col-form-label">Desea ser donador de organos</label>
             <div class="col-sm-9">
-              <input type="tel" value="" class="form-control" id="donar" >
+              <input type="tel" value="" class="form-control" id="donar" name="donar" autofocus="autofocus">
             </div>
           </div>
           <div class="justify-content-lg-end align-items-end text-end ">
@@ -292,14 +297,14 @@
           <div class="row mb-3 my-3">
             <label for="nombrePC2" class="col-sm-3 col-form-label">Nombre</label>
             <div class="col-sm-9">
-              <input type="text"  value="" class="form-control" id="nombrePC" >
+              <input type="text"  value="" class="form-control" id="nombrePC" name="nombrePC"  required="required" autocomplete="name" autofocus="autofocus">
             </div>
           </div>
           <!--Numero-->
           <div class="row mb-3 my-3">
             <label for="telefonoPC2" class="col-sm-3 col-form-label">Teléfono</label>
             <div class="col-sm-9">
-              <input type="number" value="" class="form-control" id="telefonoPC" >
+              <input type="number" value="" class="form-control" id="telefonoPC" name="telfonoPC"  required="required" autocomplete="tel-local" autofocus="autofocus">
             </div>
           </div>
         </div>
@@ -308,8 +313,8 @@
       <!--Botones-->
       <div class="bd-content bg-light border-top ">
         <div class="container-md text-black py-4">
-          <button type="submit" onclick="window.location.href='Perfil.html'" class="btn btn-primary">Guardar</button>
-          <a href="Perfil.html" class="btn btn-secondary ps-3">Cancelar</a>      
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <a class="btn btn-secondary ps-3" href="http://localhost/CuidaTe/public/perfil">Cancelar</a>
         </div>
       </div>
 

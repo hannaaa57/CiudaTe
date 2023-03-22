@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
+            $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password') ;
             $table->rememberToken();
-            $table->integer('telefono');
+            $table->string('telefono');
             $table->date('fecNacimiento');
             $table->string('genero');
             $table->string('CURP');
@@ -35,7 +35,7 @@ return new class extends Migration
             $table->string('embarazo');
             $table->string('DoA');
             $table->string('donar');
-            $table->string('file_path');
+            $table->string('file_path')->default("user.png");;
             $table->timestamps();
         });
     }

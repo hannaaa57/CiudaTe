@@ -16,15 +16,12 @@
     <img  class="img-fluid mx-auto d-block" src="images/CuidaTeLogo.png" alt="CuidaTe" width="350"> 
   </div>
   
-
     @yield('contenido')
  
-
-
-  <!--Footer-->
-  <section class="align-self-end bd-footer">
-   <footer class="bg-dark text-white text-center">
-     <div class="conteiner p-4">
+ <!--Footer-->
+ <section class="align-self-end bd-footer">
+    <footer class="bg-dark text-white text-center">
+      <div class="conteiner p-4">
         <section class="">
           <!-- Facebook -->
           <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
@@ -35,11 +32,17 @@
             <i class="fab fa-twitter"></i>
           </a>
           <!-- Instagram -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/pulseracuidate/" role="button">
             <i class="fa-brands fa-instagram"></i>
           </a>
         </section>
       </div>
+      <section class="me-2 ms-2">
+        <p>
+          Contactanos en cuidatepulsera@gmail.com
+        </p>
+      </section>
+
       <section class="me-2 ms-2">
         <p>
           Te cuidamos con CuidaTe ;)

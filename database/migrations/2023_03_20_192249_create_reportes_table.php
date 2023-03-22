@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('usuario_id');
             $table->string('nombre');
-            $table->integer('telefono');
+            $table->string('telefono');
             $table->text('comentario');
             $table->timestamps();
 
